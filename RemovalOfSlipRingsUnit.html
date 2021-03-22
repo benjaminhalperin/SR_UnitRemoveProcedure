@@ -1,0 +1,884 @@
+<HTML>
+   <HEAD>
+       <TITLE>
+           Illustrated Parts Breakdown - Slip Rings Unit
+       </TITLE>
+	   
+	   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8"/>
+	   
+		<!---======================================================================--->
+		<!---==============  Declare of the Text Styles to be used   ==============--->
+		<!---======================================================================--->
+
+		<style type="text/css">
+		.gallerycontent{
+		 width: 600px;
+		 height: 40px;
+		 border: 1px solid black;
+		 background-color: #DFDFFF;
+		 padding: 3px;
+		 display: block;
+		 align: center;
+		}
+		</style>
+
+		
+		<!---======================================================================--->
+		<!---===========  Declare of the Right Mouse Click Menu classes  ==========--->
+		<!---======================================================================--->
+
+		<script>
+            
+            var menuDisplayed = false;
+            var menuBox = null;
+            
+            window.addEventListener("contextmenu", function() {
+                var left = arguments[0].clientX;
+                var top = arguments[0].clientY;
+                
+                menuBox = window.document.querySelector(".menu");
+                menuBox.style.left = left + "px";
+                menuBox.style.top = top + "px";
+                menuBox.style.display = "block";
+                
+                arguments[0].preventDefault();
+                
+                menuDisplayed = true;
+            }, false);
+            
+            window.addEventListener("click", function() {
+                if(menuDisplayed == true){
+                    menuBox.style.display = "none"; 
+                }
+            }, true);
+        </script>
+		
+		<!---===========  Styling of the Right Mouse Click Menu ==========--->
+		 <style>
+            .menu
+            {
+                width: 250px;
+				background-color: yellow;
+                box-shadow: 3px 3px 5px #888888;
+                border-style: solid;
+                border-width: 2px;
+                border-color: grey;
+                border-radius: 2px;
+                padding-left: 5px;
+                padding-right: 5px;
+                padding-top: 3px;
+                padding-bottom: 3px;
+                position: fixed;
+                display: none;
+            }
+			
+            .menu-item
+            {
+                height: 20px;
+				color: black;
+            }
+            
+            .menu-item:hover
+            {
+                background-color: #0066ff;
+                cursor: pointer;
+            }
+			
+			a:link {
+				color: black;
+			   text-decoration: none;
+			}
+
+			/* visited link */
+			a:visited {
+			  color: black;	  
+			}
+
+			/* mouse over link */
+			a:hover {
+			  color: white;
+			}
+
+			/* selected link */
+			a:active {
+			  color: red;
+			}
+			
+<!---======================================================================--->
+<!---==============  Declare of the Tooltips labels classes  ==============--->
+<!---======================================================================--->
+
+/* ============================= Main image positioning in main screen ============================ */ 
+		#locator { 
+			position: absolute; 
+			visibility: visible; 
+			left: 10px; 
+			top: 210px; 
+			height: 488px; 
+			width: 1267px;			
+		}
+
+/* =======  TooltipITEM1 =========  */
+		.tooltipITEM1 {
+		  position: relative;
+		  left: 110px;
+		  top: -430px;
+		  display: inline-block;
+		  border-bottom: 1px dotted black;
+		}
+
+		.tooltipITEM1 .tooltiptext {
+		  visibility: hidden;
+		  width: 200px;
+		  background-color: #555;
+		  color: #fff;
+		  text-align: center;
+		  border-radius: 6px;
+		  padding: 5px 0;
+		  position: absolute;
+		  z-index: 1;
+		  bottom: 125%;
+		  left: 50%;
+		  margin-left: -60px;
+		  opacity: 0;
+		  transition: opacity 0.3s;
+		}
+
+		.tooltipITEM1 .tooltiptext::after {
+		  content: "";
+		  position: absolute;
+		  top: 100%;
+		  left: 50%;
+		  margin-left: -5px;
+		  border-width: 5px;
+		  border-style: solid;
+		  border-color: #555 transparent transparent transparent;
+		}
+
+		.tooltipITEM1:hover .tooltiptext {
+		  visibility: visible;
+		  opacity: 1;
+		}
+					
+/* =======  TooltipITEM9 =========  */
+		.tooltipITEM9 {
+		  position: relative;
+		  left: 407px;
+		  top: -425px;
+		  display: inline-block;
+		  border-bottom: 1px dotted black;
+		}
+
+		.tooltipITEM9 .tooltiptext {
+		  visibility: hidden;
+		  width: 200px;
+		  background-color: #555;
+		  color: #fff;
+		  text-align: center;
+		  border-radius: 6px;
+		  padding: 5px 0;
+		  position: absolute;
+		  z-index: 1;
+		  bottom: 125%;
+		  left: 50%;
+		  margin-left: -60px;
+		  opacity: 0;
+		  transition: opacity 0.3s;
+		}
+
+		.tooltipITEM9 .tooltiptext::after {
+		  content: "";
+		  position: absolute;
+		  top: 100%;
+		  left: 50%;
+		  margin-left: -5px;
+		  border-width: 5px;
+		  border-style: solid;
+		  border-color: #555 transparent transparent transparent;
+		}
+
+		.tooltipITEM9:hover .tooltiptext {
+		  visibility: visible;
+		  opacity: 1;
+		}
+						
+/* =======  TooltipITEM22 =========  */
+		.tooltipITEM22 {
+		  position: relative;
+		  left: 430px;
+		  top: -400px;
+		  display: inline-block;
+		  border-bottom: 1px dotted black;
+		}
+
+		.tooltipITEM22 .tooltiptext {
+		  visibility: hidden;
+		  width: 250px;
+		  background-color: #555;
+		  color: #fff;
+		  text-align: center;
+		  border-radius: 6px;
+		  padding: 5px 0;
+		  position: absolute;
+		  z-index: 1;
+		  bottom: 125%;
+		  left: 50%;
+		  margin-left: -60px;
+		  opacity: 0;
+		  transition: opacity 0.3s;
+		}
+
+		.tooltipITEM22 .tooltiptext::after {
+		  content: "";
+		  position: absolute;
+		  top: 100%;
+		  left: 50%;
+		  margin-left: -5px;
+		  border-width: 5px;
+		  border-style: solid;
+		  border-color: #555 transparent transparent transparent;
+		}
+
+		.tooltipITEM22:hover .tooltiptext {
+		  visibility: visible;
+		  opacity: 1;
+		}			
+			
+/* =======  TooltipITEM21 =========  */
+		.tooltipITEM21 {
+		  position: relative;
+		  left: 510px;
+		  top: -400px;
+		  display: inline-block;
+		  border-bottom: 1px dotted black;
+		}
+
+		.tooltipITEM21 .tooltiptext {
+		  visibility: hidden;
+		  width: 250px;
+		  background-color: #555;
+		  color: #fff;
+		  text-align: center;
+		  border-radius: 6px;
+		  padding: 5px 0;
+		  position: absolute;
+		  z-index: 1;
+		  bottom: 125%;
+		  left: 50%;
+		  margin-left: -60px;
+		  opacity: 0;
+		  transition: opacity 0.3s;
+		}
+
+		.tooltipITEM21 .tooltiptext::after {
+		  content: "";
+		  position: absolute;
+		  top: 100%;
+		  left: 50%;
+		  margin-left: -5px;
+		  border-width: 5px;
+		  border-style: solid;
+		  border-color: #555 transparent transparent transparent;
+		}
+
+		.tooltipITEM21:hover .tooltiptext {
+		  visibility: visible;
+		  opacity: 1;
+		}			
+			
+/* =======  TooltipITEM14 =========  */
+		.tooltipITEM14 {
+		  position: relative;
+		  left: 572px;
+		  top: -383px;
+		  display: inline-block;
+		  border-bottom: 1px dotted black;
+		}
+
+		.tooltipITEM14 .tooltiptext {
+		  visibility: hidden;
+		  width: 250px;
+		  background-color: #555;
+		  color: #fff;
+		  text-align: center;
+		  border-radius: 6px;
+		  padding: 5px 0;
+		  position: absolute;
+		  z-index: 1;
+		  bottom: 125%;
+		  left: 50%;
+		  margin-left: -60px;
+		  opacity: 0;
+		  transition: opacity 0.3s;
+		}
+
+		.tooltipITEM14 .tooltiptext::after {
+		  content: "";
+		  position: absolute;
+		  top: 100%;
+		  left: 50%;
+		  margin-left: -5px;
+		  border-width: 5px;
+		  border-style: solid;
+		  border-color: #555 transparent transparent transparent;
+		}
+
+		.tooltipITEM14:hover .tooltiptext {
+		  visibility: visible;
+		  opacity: 1;
+		}			
+
+/* =======  TooltipITEM15 =========  */
+		.tooltipITEM15 {
+		  position: relative;
+		  left: 635px;
+		  top: -460px;
+		  display: inline-block;
+		  border-bottom: 1px dotted black;
+		}
+
+		.tooltipITEM15 .tooltiptext {
+		  visibility: hidden;
+		  width: 250px;
+		  background-color: #555;
+		  color: #fff;
+		  text-align: center;
+		  border-radius: 6px;
+		  padding: 5px 0;
+		  position: absolute;
+		  z-index: 1;
+		  bottom: 125%;
+		  left: 50%;
+		  margin-left: -60px;
+		  opacity: 0;
+		  transition: opacity 0.3s;
+		}
+
+		.tooltipITEM15 .tooltiptext::after {
+		  content: "";
+		  position: absolute;
+		  top: 100%;
+		  left: 50%;
+		  margin-left: -5px;
+		  border-width: 5px;
+		  border-style: solid;
+		  border-color: #555 transparent transparent transparent;
+		}
+
+		.tooltipITEM15:hover .tooltiptext {
+		  visibility: visible;
+		  opacity: 1;
+		}			
+												
+/* =======  TooltipITEM20 =========  */
+		.tooltipITEM20 {
+		  position: relative;
+		  left: 745px;
+		  top: -445px;
+		  display: inline-block;
+		  border-bottom: 1px dotted black;
+		}
+
+		.tooltipITEM20 .tooltiptext {
+		  visibility: hidden;
+		  width: 250px;
+		  background-color: #555;
+		  color: #fff;
+		  text-align: center;
+		  border-radius: 6px;
+		  padding: 5px 0;
+		  position: absolute;
+		  z-index: 1;
+		  bottom: 125%;
+		  left: 50%;
+		  margin-left: -60px;
+		  opacity: 0;
+		  transition: opacity 0.3s;
+		}
+
+		.tooltipITEM20 .tooltiptext::after {
+		  content: "";
+		  position: absolute;
+		  top: 100%;
+		  left: 50%;
+		  margin-left: -5px;
+		  border-width: 5px;
+		  border-style: solid;
+		  border-color: #555 transparent transparent transparent;
+		}
+
+		.tooltipITEM20:hover .tooltiptext {
+		  visibility: visible;
+		  opacity: 1;
+		}			
+									
+/* =======  TooltipITEM5 =========  */
+		.tooltipITEM5 {
+		  position: relative;
+		  left: 1110px;
+		  top: -430px;
+		  display: inline-block;
+		  border-bottom: 1px dotted black;
+		}
+
+		.tooltipITEM5 .tooltiptext {
+		  visibility: hidden;
+		  width: 160px;
+		  background-color: #99ffcc;
+		  color: #006600;
+		  text-align: center;
+		  border-radius: 6px;
+		  padding: 5px 0;
+		  position: absolute;
+		  z-index: 1;
+		  bottom: 125%;
+		  left: 50%;
+		  margin-left: -60px;
+		  opacity: 0;
+		  transition: opacity 0.3s;
+		}
+
+		.tooltipITEM5 .tooltiptext::after {
+		  content: "";
+		  position: absolute;
+		  top: 100%;
+		  left: 50%;
+		  margin-left: -5px;
+		  border-width: 5px;
+		  border-style: solid;
+		  border-color: #555 transparent transparent transparent;
+		}
+
+		.tooltipITEM5:hover .tooltiptext {
+		  visibility: visible;
+		  opacity: 1;
+		}			
+									
+/* =======  TooltipITEM2 =========  */
+		.tooltipITEM2 {
+		  position: relative;
+		  left: 1110px;
+		  top: -230px;
+		  display: inline-block;
+		  border-bottom: 1px dotted black;
+		}
+
+		.tooltipITEM2 .tooltiptext {
+		  visibility: hidden;
+		  width: 160px;
+		  background-color: #99ffcc;
+		  color: #006600;
+		  text-align: center;
+		  border-radius: 6px;
+		  padding: 5px 0;
+		  position: absolute;
+		  z-index: 1;
+		  bottom: 125%;
+		  left: 50%;
+		  margin-left: -60px;
+		  opacity: 0;
+		  transition: opacity 0.3s;
+		}
+
+		.tooltipITEM2 .tooltiptext::after {
+		  content: "";
+		  position: absolute;
+		  top: 100%;
+		  left: 50%;
+		  margin-left: -5px;
+		  border-width: 5px;
+		  border-style: solid;
+		  border-color: #555 transparent transparent transparent;
+		}
+
+		.tooltipITEM2:hover .tooltiptext {
+		  visibility: visible;
+		  opacity: 1;
+		}
+
+									
+/* =======  TooltipITEM4 =========  */
+		.tooltipITEM4 {
+		  position: relative;
+		  left: 1055px;
+		  top: -220px;
+		  display: inline-block;
+		  border-bottom: 1px dotted black;
+		}
+
+		.tooltipITEM4 .tooltiptext {
+		  visibility: hidden;
+		  width: 160px;
+		  background-color: #99ffcc;
+		  color: #006600;
+		  text-align: center;
+		  border-radius: 6px;
+		  padding: 5px 0;
+		  position: absolute;
+		  z-index: 1;
+		  bottom: 125%;
+		  left: 50%;
+		  margin-left: -60px;
+		  opacity: 0;
+		  transition: opacity 0.3s;
+		}
+
+		.tooltipITEM4 .tooltiptext::after {
+		  content: "";
+		  position: absolute;
+		  top: 100%;
+		  left: 50%;
+		  margin-left: -5px;
+		  border-width: 5px;
+		  border-style: solid;
+		  border-color: #555 transparent transparent transparent;
+		}
+
+		.tooltipITEM4:hover .tooltiptext {
+		  visibility: visible;
+		  opacity: 1;
+		}			
+		
+									
+/* =======  TooltipITEM3 =========  */
+		.tooltipITEM3 {
+		  position: relative;
+		  left: 1110px;
+		  top: -110px;
+		  display: inline-block;
+		  border-bottom: 1px dotted black;
+		}
+
+		.tooltipITEM3 .tooltiptext {
+		  visibility: hidden;
+		  width: 160px;
+		  background-color: #99ffcc;
+		  color: #006600;
+		  text-align: center;
+		  border-radius: 6px;
+		  padding: 5px 0;
+		  position: absolute;
+		  z-index: 1;
+		  bottom: 125%;
+		  left: 50%;
+		  margin-left: -60px;
+		  opacity: 0;
+		  transition: opacity 0.3s;
+		}
+
+		.tooltipITEM3 .tooltiptext::after {
+		  content: "";
+		  position: absolute;
+		  top: 100%;
+		  left: 50%;
+		  margin-left: -5px;
+		  border-width: 5px;
+		  border-style: solid;
+		  border-color: #555 transparent transparent transparent;
+		}
+
+		.tooltipITEM3:hover .tooltiptext {
+		  visibility: visible;
+		  opacity: 1;
+		}			
+			
+									
+/* =======  TooltipITEM6 =========  */
+		.tooltipITEM6 {
+		  position: relative;
+		  left: 1055px;
+		  top: -50px;
+		  display: inline-block;
+		  border-bottom: 1px dotted black;
+		}
+
+		.tooltipITEM6 .tooltiptext {
+		  visibility: hidden;
+		  width: 160px;
+		  background-color: #99ffcc;
+		  color: #006600;
+		  text-align: center;
+		  border-radius: 6px;
+		  padding: 5px 0;
+		  position: absolute;
+		  z-index: 1;
+		  bottom: 125%;
+		  left: 50%;
+		  margin-left: -60px;
+		  opacity: 0;
+		  transition: opacity 0.3s;
+		}
+
+		.tooltipITEM6 .tooltiptext::after {
+		  content: "";
+		  position: absolute;
+		  top: 100%;
+		  left: 50%;
+		  margin-left: -5px;
+		  border-width: 5px;
+		  border-style: solid;
+		  border-color: #555 transparent transparent transparent;
+		}
+
+		.tooltipITEM6:hover .tooltiptext {
+		  visibility: visible;
+		  opacity: 1;
+		}			
+				
+								
+		</style>
+
+   </HEAD>
+
+   <BODY>
+<!---===============================================================================--->
+<!---================  The section of Right Click Menu application  ================--->
+<!---===============================================================================--->
+
+       <div class="menu">
+			<div class="menu-item"><a href="RemovalOfPedestalSlipRingsUnit.pdf">Assembly and Disassembly</a></div>
+			<div class="menu-item"><a href="MaintenanceConceptIntrod.pdf">Maintenance Introduction</a></div>
+        </div>
+
+<!---===============================================================================--->
+<!---===================   Text style section begins here  =========================--->
+<!---===============================================================================--->
+
+      <style type="text/css">
+		  body { margin-left: 5%; margin-right: 10%; }
+		  h1 { margin-left: 10%; font-size: 28; color: red; }
+		  h2 { margin-left: -2%; font-size: 20; color: blue; }
+		  h3 { margin-left: -2%; font-size: 20; color: teal; }
+		  h4,h5,h6 { margin-left: -2%; }
+		  h4 { font-style: italic; font-weight: bold; }
+     </style>
+
+<!---==================   Body text begins here  ==================--->
+    <h1>ILLUSTRATED PARTS BREAKDOWN</h1><br>
+ 
+    <h2>Pedestal Slip Rings Unit</h2>
+	<h4>Click mouse right button on form for maintenance menu</h4>
+	<h4>Click mouse left button on plug balloon for pin layout display picture</h4>
+	<h4>Hover mouse sign on figure balloon for item details</h4>
+	
+	
+<blockquote>
+
+<!---==================   Mapping hot areas for tooltips & link section begins here  ==================--->
+
+    <div id="locator">
+		<img src="SlipRingUnit.JPG" border="0" usemap="#SlipRingUnit" />
+		
+		<map name="SlipRingUnit">
+		
+			<div class="tooltipITEM1">
+				<area shape="circle" coords="149, 84, 15"/>    
+				<span class="tooltiptext">Slipring Mechanical Assembly P.N. SH3 01-04-00ASSY V-01</span>
+			</div>
+		
+			<div class="tooltipITEM9">
+				<area shape="circle" coords="450, 96, 15"/>    
+				<span class="tooltiptext">Butt Splice Blue P.N. BV2</span>
+			</div>
+			
+			<div class="tooltipITEM22">
+				<area shape="circle" coords="503, 120, 15"/>    
+				<span class="tooltiptext">Shrink Tube 3/32 P.N. HFTW13634</span>
+			</div>
+		
+			<div class="tooltipITEM21">
+				<area shape="circle" coords="585, 119, 15"/>    
+				<span class="tooltiptext">C02 , C03 P.N. C320C104K1R5TA</span>
+			</div>
+		
+			<div class="tooltipITEM14">
+				<area shape="circle" coords="651, 136, 15"/>    
+				<span class="tooltiptext">Shrink Tube 1/4 P.N. HFTW13637</span>
+			</div>
+		
+			<div class="tooltipITEM15">
+				<area shape="circle" coords="720, 58, 15"/>    
+				<span class="tooltiptext">Shielding Tube 1/8 P.N. Alfawire 1229</span>
+			</div>
+					
+			<div class="tooltipITEM20">
+				<area shape="circle" coords="834, 71, 15"/>    
+				<span class="tooltiptext">C01 P.N. MLP152M080EK0A</span>
+			</div>
+			
+			<div class="tooltipITEM5">
+				<area shape="circle" coords="1161, 91, 15"
+				href="SlipRingsUnit_J04_PinLayout.JPG" />    
+				<span class="tooltiptext">Connector J04  D38999/24WG16PN</span>
+			</div>
+			
+			<div class="tooltipITEM2">
+				<area shape="circle" coords="1251, 293, 15"
+				href="SlipRingsUnit_J01_PinLayout.JPG" />    
+				<span class="tooltiptext">Connector J01  D38999/24WG16PA</span>
+			</div>
+		
+			<div class="tooltipITEM4">
+				<area shape="circle" coords="1114, 300, 15"
+				href="SlipRingsUnit_J03_PinLayout.JPG" />    
+				<span class="tooltiptext">Connector J03  D38999/24WE26PN</span>
+			</div>
+		
+				
+			<div class="tooltipITEM3">
+				<area shape="circle" coords="1188, 414, 15"
+				href="SlipRingsUnit_J02_PinLayout.JPG" />    
+				<span class="tooltiptext">Connector J02  D38999/24WD35SA</span>
+			</div>
+	
+						
+			<div class="tooltipITEM6">
+				<area shape="circle" coords="1120, 470, 15"
+				href="SlipRingsUnit_J05_PinLayout.JPG" />    
+				<span class="tooltiptext">Connector J05  D38999/24WC35SN</span>
+			</div>
+	
+		</map>
+	</div>
+
+	<br><br><br>
+<!---==================   Mapping hot areas for link section ends here  ==================--->
+
+	<div align="center">
+		<table border="1" cellpadding="10" width="70%">
+			<caption><font color=#3300CC size=+1 >Pedestal Slip Rings Unit - Removal and Installation</caption>
+
+			<tr align="center"><th bgcolor="#CCCC99" width=80>Index No.</th>
+								<th bgcolor="#CCCC99" width=200>Part No.</th>
+								<th bgcolor="#CCCC99">Description</th>
+								 <th bgcolor="#CCCC99" width=60>UNITS PER ASSY</th></tr>
+
+			<tr align="center"><td bgcolor="#FFFF99" align="center"><font color=#3300CC>Fig. Ind</font></td>
+								<td bgcolor="#FFFF99" align="center"><font color=#3300CC>SH3-01-04-00-WIR V-04</font></td>
+								<td bgcolor="#FFFF99" align="left"><font color=#3300CC>SLIP RINGS UNIT</font></td>
+								<td bgcolor="#FFFF99" align="center"><font color=#3300CC>QTY</font></td></tr>
+
+			<tr align="center"><td bgcolor="#FFFF99" align="center">1</td>
+								<td bgcolor="#FFFF99" align="left">SH3 01-04-00ASSY V-01</td>
+								<td bgcolor="#FFFF99" align="left">Slipring Mechanical Assembly</td>
+								<td bgcolor="#FFFF99" align="center">1</td></tr>
+
+			<tr align="center"><td bgcolor="#FFFF99" align="center">2</td>
+								<td bgcolor="#FFFF99" align="left">D38999/24WG16PA</td>
+								<td bgcolor="#FFFF99" align="left">Connector J01t</td>
+								<td bgcolor="#FFFF99" align="center">1</td></tr>
+
+			<tr align="center"><td bgcolor="#FFFF99" align="center">3</td>
+								<td bgcolor="#FFFF99" align="left">D38999/24WD35SA</td>
+								<td bgcolor="#FFFF99" align="left">Connector J02</td>
+								<td bgcolor="#FFFF99" align="center">1</td></tr>
+
+			<tr align="center"><td bgcolor="#FFFF99" align="center">4</td>
+								<td bgcolor="#FFFF99" align="left">D38999/24WE26PN</td>
+								<td bgcolor="#FFFF99" align="left">Connector J03</td>
+								<td bgcolor="#FFFF99" align="center">1</td></tr>
+
+			<tr align="center"><td bgcolor="#FFFF99" align="center">5</td>
+								<td bgcolor="#FFFF99" align="left">D38999/24WG16PN</td>
+								<td bgcolor="#FFFF99" align="left">Connector J04</td>
+								<td bgcolor="#FFFF99" align="center">1</td></tr>
+
+			<tr align="center"><td bgcolor="#FFFF99" align="center">6</td>
+								<td bgcolor="#FFFF99" align="left">D38999/24WC35SN</td>
+								<td bgcolor="#FFFF99" align="left">Connector J05</td>
+								<td bgcolor="#FFFF99" align="center">1</td></tr>
+								
+			<tr align="center"><td bgcolor="#FFFF99" align="center">7</td>
+								<td bgcolor="#FFFF99" align="left">GS4-1</td>
+								<td bgcolor="#FFFF99" align="left">Terminal Ring</td>
+								<td bgcolor="#FFFF99" align="center">4</td></tr>
+								
+			<tr align="center"><td bgcolor="#FFFF99" align="center">8</td>
+								<td bgcolor="#FFFF99" align="left">KSS CV-140B</td>
+								<td bgcolor="#FFFF99" align="left">Cable Tie</td>
+								<td bgcolor="#FFFF99" align="center">9</td></tr>
+								
+			<tr align="center"><td bgcolor="#FFFF99" align="center">9</td>
+								<td bgcolor="#FFFF99" align="left">BV2</td>
+								<td bgcolor="#FFFF99" align="left">Butt Splice Blue</td>
+								<td bgcolor="#FFFF99" align="center">8</td></tr>
+								
+			<tr align="center"><td bgcolor="#FFFF99" align="center">10</td>
+								<td bgcolor="#FFFF99" align="left">5854-7-05</td>
+								<td bgcolor="#FFFF99" align="left">Yellow wire , 24 awg, PTFE, 600V</td>
+								<td bgcolor="#FFFF99" align="center">4.6m</td></tr>
+								
+			<tr align="center"><td bgcolor="#FFFF99" align="center">11</td>
+								<td bgcolor="#FFFF99" align="left">5856-7-02</td>
+								<td bgcolor="#FFFF99" align="left">Black wire , 20 awg, PTFE, 600V</td>
+								<td bgcolor="#FFFF99" align="center">3m</td></tr>
+
+			<tr align="center"><td bgcolor="#FFFF99" align="center">12</td>
+								<td bgcolor="#FFFF99" align="left">5856-7-03</td>
+								<td bgcolor="#FFFF99" align="left">Red wire , 20 awg, PTFE, 600V</td>
+								<td bgcolor="#FFFF99" align="center">3m</td></tr>
+
+			<tr align="center"><td bgcolor="#FFFF99" align="center">13</td>
+								<td bgcolor="#FFFF99" align="left">HFTW13636</td>
+								<td bgcolor="#FFFF99" align="left">Shrink Tube 3/16"</td>
+								<td bgcolor="#FFFF99" align="center">0.36m</td></tr>
+													
+			<tr align="center"><td bgcolor="#FFFF99" align="center">14</td>
+								<td bgcolor="#FFFF99" align="left">HFTW13637</td>
+								<td bgcolor="#FFFF99" align="left">Shrink Tube 1/4"</td>
+								<td bgcolor="#FFFF99" align="center">4.26m</td></tr>
+													
+			<tr align="center"><td bgcolor="#FFFF99" align="center">15</td>
+								<td bgcolor="#FFFF99" align="left">Alfawire 1229</td>
+								<td bgcolor="#FFFF99" align="left">Shielding Tube 1/8"</td>
+								<td bgcolor="#FFFF99" align="center">5.125m</td></tr>
+								
+			<tr align="center"><td bgcolor="#FFFF99" align="center">16</td>
+								<td bgcolor="#FFFF99" align="left">KSS CV-100B</td>
+								<td bgcolor="#FFFF99" align="left">Cable Tie</td>
+								<td bgcolor="#FFFF99" align="center">9</td></tr>
+
+			<tr align="center"><td bgcolor="#FFFF99" align="center">17</td>
+								<td bgcolor="#FFFF99" align="left">UC-5</td>
+								<td bgcolor="#FFFF99" align="left">P-Clip</td>
+								<td bgcolor="#FFFF99" align="center">1</td></tr>
+
+			<tr align="center"><td bgcolor="#FFFF99" align="center">18</td>
+								<td bgcolor="#FFFF99" align="left">UC-3</td>
+								<td bgcolor="#FFFF99" align="left">P-Clip</td>
+								<td bgcolor="#FFFF99" align="center">2</td></tr>
+													
+			<tr align="center"><td bgcolor="#FFFF99" align="center">19</td>
+								<td bgcolor="#FFFF99" align="left">UC-4</td>
+								<td bgcolor="#FFFF99" align="left">P-Clip</td>
+								<td bgcolor="#FFFF99" align="center">1</td></tr>
+													
+			<tr align="center"><td bgcolor="#FFFF99" align="center">20</td>
+								<td bgcolor="#FFFF99" align="left">MLP152M080EK0A</td>
+								<td bgcolor="#FFFF99" align="left">C01</td>
+								<td bgcolor="#FFFF99" align="center">1</td></tr>
+													
+			<tr align="center"><td bgcolor="#FFFF99" align="center">21</td>
+								<td bgcolor="#FFFF99" align="left">C320C104K1R5TA</td>
+								<td bgcolor="#FFFF99" align="left">C02 , C03</td>
+								<td bgcolor="#FFFF99" align="center">2</td></tr>
+													
+			<tr align="center"><td bgcolor="#FFFF99" align="center">22</td>
+								<td bgcolor="#FFFF99" align="left">HFTW13634</td>
+								<td bgcolor="#FFFF99" align="left">Shrink Tube 3/32"</td>
+								<td bgcolor="#FFFF99" align="center">1</td></tr>
+													
+			<tr align="center"><td bgcolor="#FFFF99" align="center">23</td>
+								<td bgcolor="#FFFF99" align="left">CCP-TO-1818</td>
+								<td bgcolor="#FFFF99" align="left">Crimp parallel splice</td>
+								<td bgcolor="#FFFF99" align="center">30</td></tr>
+											
+		</table>
+	</div>
+<br><br><br>
+</blockquote>
+
+
+   </BODY>
+
+</HTML>
